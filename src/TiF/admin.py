@@ -3,7 +3,7 @@ from . import models
 
 
 admin.site.register(models.User)
-admin.site.register(models.Categorie)
+admin.site.register(models.Category)
 admin.site.register(models.Foundation)
 admin.site.register(models.Comment)
 admin.site.register(models.Text)

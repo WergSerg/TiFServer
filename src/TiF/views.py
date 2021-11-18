@@ -1,12 +1,8 @@
-from rest_framework.generics import ListAPIView
-from rest_framework.response import Response
-from rest_framework import  viewsets,pagination
-from rest_framework.permissions import AllowAny
+from rest_framework import viewsets, pagination
 
 
-from .models import User, Message, Text,Comment,Categorie,Foundation
-from .serializers import  TextNestedSerilizer,Listser
-
+from .models import User, Message, Text, Comment, Category, Foundation
+from .serializers import TextNestedSerilizer, CategoryReverseSerialize
 
 
 class TextModeViewSet(viewsets.ModelViewSet):
@@ -15,5 +11,5 @@ class TextModeViewSet(viewsets.ModelViewSet):
 
 
 class List1(viewsets.ModelViewSet):
-    queryset = Categorie.objects.all()
-    serializer_class =Listser
+    queryset = Category.objects.all()
+    serializer_class = CategoryReverseSerialize

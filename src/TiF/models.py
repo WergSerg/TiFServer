@@ -28,7 +28,7 @@ class Message(models.Model):
         return str(self.author_id)
 
 
-class Categorie(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=128)
 
     def __str__(self):
@@ -36,7 +36,7 @@ class Categorie(models.Model):
 
 
 class Foundation(models.Model):
-    category = models.ForeignKey(Categorie, on_delete=models.CASCADE, related_name='category')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='category')
     name = models.CharField(max_length=200)
 
     def __str__(self):

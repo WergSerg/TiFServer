@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import User, Message, Text,Comment, Choice,Mpaa,Foundation,TextDep,Hashtag, Categorie
+from .models import User, Message, Text,Comment, Choice,Mpaa,Foundation,TextDep,Hashtag, Category
 
 
 class FoundationSerialize(serializers.ModelSerializer):
@@ -53,7 +53,7 @@ class TextNestedSerilizer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class foundser(serializers.ModelSerializer):
+class FoundationReverseSerialize(serializers.ModelSerializer):
     text_deps = serializers.SerializerMethodField(source='count_text')
 
     class Meta:
@@ -63,9 +63,9 @@ class foundser(serializers.ModelSerializer):
     def get_text_deps(self, obj):
         return obj.text_deps.count()
 
-class Listser(serializers.ModelSerializer):
-    category = foundser(many=True)
+class CategoryReverseSerialize(serializers.ModelSerializer):
+    category = FoundationReverseSerialize(many=True)
 
     class Meta:
-        model = Categorie
+        model = Category
         fields = ['name','category']
