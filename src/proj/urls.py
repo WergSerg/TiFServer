@@ -21,6 +21,7 @@ from TiF import views
 
 router=routers.DefaultRouter()
 router.register(r'Text',views.TextModeViewSet)
+router.register(r'tst',views.List1)
 
 
 urlpatterns = [
