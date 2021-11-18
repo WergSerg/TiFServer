@@ -64,8 +64,8 @@ class FoundationReverseSerialize(serializers.ModelSerializer):
         return obj.text_deps.count()
 
 class CategoryReverseSerialize(serializers.ModelSerializer):
-    category = FoundationReverseSerialize(many=True)
+    categorys = FoundationReverseSerialize(many=True)
 
     class Meta:
         model = Category
-        fields = ['name','category']
+        fields = ['name','categorys']

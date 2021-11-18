@@ -1,8 +1,6 @@
 from django.db import models
 
 
-# {'ininprogress':'inprogress', 'done':'done', 'canceled':'canceled', 'blocked_by_admin':'blocked_by_admin'}
-
 
 class User(models.Model):
     username = models.CharField(max_length=128)
@@ -36,7 +34,7 @@ class Category(models.Model):
 
 
 class Foundation(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='category')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='categorys')
     name = models.CharField(max_length=200)
 
     def __str__(self):

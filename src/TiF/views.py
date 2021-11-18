@@ -10,6 +10,6 @@ class TextModeViewSet(viewsets.ModelViewSet):
     serializer_class = TextNestedSerilizer
 
 
-class List1(viewsets.ModelViewSet):
+class CategoryTree(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategoryReverseSerialize
