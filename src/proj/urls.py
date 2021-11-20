@@ -23,6 +23,7 @@ from TiF import views
 router=routers.DefaultRouter()
 router.register(r'Text',views.TextModeViewSet)
 router.register(r'category',views.CategoryTree)
+router.register(r'createText',views.CreateText)
 
 
 urlpatterns = [

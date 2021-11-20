@@ -69,3 +69,8 @@ class CategoryReverseSerialize(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ['name','categorys']
+
+class CreateTextSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Text
+        fields ='__all__'
