@@ -3,8 +3,8 @@ from rest_framework.response import Response
 from rest_framework.generics import CreateAPIView
 from rest_framework.permissions import  IsAdminUser, IsAuthenticated
 
-from src.TiF.models import  Text,  Category,  User
-from src.TiF.serializers import TextNestedSerilizer, \
+from .models import  Text,  Category,  User
+from .serializers import TextNestedSerilizer, \
     CategoryReverseSerialize, \
     CreateTextSerializer, \
     CategorySerialize, \

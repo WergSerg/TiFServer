@@ -1,5 +1,5 @@
 from django.contrib import admin
-from src.TiF import models
+from . import models
 
 
 admin.site.register(models.User)

@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from src.TiF.models import User,   Text, Comment, Choice, Mpaa, Foundation, TextDep, Hashtag, Category
+from .models import User,   Text, Comment, Choice, Mpaa, Foundation, TextDep, Hashtag, Category
 
 
 
